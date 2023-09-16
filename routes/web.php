@@ -13,6 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('landing');
+// Route::get('/', function () {
+//     return view('landing');
+// });
+
+Route::view('/', 'landing');
+
+Route::get('/about', function(){
+    $title = 'About Us';
+    $description = 'Blogging is website for sharing your thoughts and ideas with.';
+
+   return view('about', compact('title', 'description'));
 });
