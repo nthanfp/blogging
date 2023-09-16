@@ -7,5 +7,6 @@
     {{-- Ini comment --}}
     <h1>{{ $title }}</h1>
     <p>{{ $description }}</p>
+    {!! $button !!}
 </div>
 @endsection
