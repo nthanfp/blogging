@@ -24,5 +24,5 @@ Route::get('/about', function(){
     $description = 'Blogging is website for sharing your thoughts and ideas with.';
     $button = '<a class="btn btn-lg btn-secondary" href="/">Back to Landing Page</a>';
 
-   return view('about', compact('title', 'description'));
+   return view('about', compact('title', 'description', 'button'));
 });
