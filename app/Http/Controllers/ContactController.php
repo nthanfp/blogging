@@ -19,6 +19,6 @@ class ContactController extends Controller
             "phone_number" => "required|numeric|digits_between:5,15"
         ]);
 
-        dump($validated);
+        echo $validated['full_name'];
     }
 }
