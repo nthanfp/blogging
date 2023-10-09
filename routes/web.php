@@ -22,7 +22,7 @@ use Illuminate\Support\Facades\Route;
 //     return view('landing');
 // });
 
-Route::get('/', LandingController::class);
+Route::get('/', LandingController::class)->name('landing');
 
 Route::get('/about', [AboutController::class, 'index']);
 

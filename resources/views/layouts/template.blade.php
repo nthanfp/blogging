@@ -57,7 +57,8 @@
     </main>
 
     <footer class="blog-footer">
-        <p>Copyright © {{ date('Y') }} <a href="/">Blogging</a> -
+        <p>Copyright © {{ date('Y') }} <a class="blog-header-logo text-dark"
+                href="{{ route('landing') }}">Blogging</a> -
             <a href="{{ route('contact-us.index') }}">Subscribe</a>
         </p>
         <p>
