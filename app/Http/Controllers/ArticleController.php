@@ -9,6 +9,12 @@ use Illuminate\Support\Facades\Storage;
 
 class ArticleController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth')->except('show');
+        $this->middleware('admin')->except(['show']);
+    }
+
     /**
      * Display a listing of the resource.
      */
@@ -52,7 +58,7 @@ class ArticleController extends Controller
         $article = Article::create([
             'title' => $validated['title'],
             'body' => $validated['body'],
-            'published_at' => $request->has('is_published') ? Carbon::now() : false,
+            'published_at' => $request->has('is_published') ? Carbon::now() : null,
             'image' => $validated['image'] ?? null,
         ]);
 
